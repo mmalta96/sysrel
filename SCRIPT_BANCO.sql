@@ -22,13 +22,15 @@ CREATE TABLE TB_LIDER_PESQUISA (
   EMAIL VARCHAR(45) NOT NULL,
   SENHA VARCHAR(64) NOT NULL,
   SENHA_ANTIGA VARCHAR(64) NULL
+  ERROS_LOGIN INT NULL
 );
 
 CREATE TABLE TB_ADMINISTRADOR (
   ID INT PRIMARY KEY AUTO_INCREMENT,
   EMAIL VARCHAR(45) NOT NULL,
   SENHA VARCHAR(64) NOT NULL,
-  SENHA_ANTIGA VARCHAR(64) NULL
+  SENHA_ANTIGA VARCHAR(64) NULL,
+  ERROS_LOGIN INT NULL
 );
 
 CREATE TABLE TB_RECUPERAR_SENHA (
@@ -54,3 +56,17 @@ INSERT INTO `tb_telas` (`ID`,`DESCRICAO`,`CAMINHO`) VALUES (9,'Cadastro de Publi
 INSERT INTO `tb_telas` (`ID`,`DESCRICAO`,`CAMINHO`) VALUES (10,'Cadastro de Equipamentos','cadastroequipamentos.php');
 INSERT INTO `tb_telas` (`ID`,`DESCRICAO`,`CAMINHO`) VALUES (11,'Cadastro de Reuniões','cadastroreunioes.php');
 INSERT INTO `tb_telas` (`ID`,`DESCRICAO`,`CAMINHO`) VALUES (12,'Relatório','relatorio.php');
+
+
+INSERT INTO `bd_sysrel`.`tb_permissao_telas` (`ID_TELA_FK`, `ADM`, `LIDER`) VALUES ('1', b'1', b'1');
+INSERT INTO `bd_sysrel`.`tb_permissao_telas` (`ID_TELA_FK`, `ADM`, `LIDER`) VALUES ('2', b'1', b'1');
+INSERT INTO `bd_sysrel`.`tb_permissao_telas` (`ID_TELA_FK`, `ADM`, `LIDER`) VALUES ('3', b'1', b'1');
+INSERT INTO `bd_sysrel`.`tb_permissao_telas` (`ID_TELA_FK`, `ADM`, `LIDER`) VALUES ('4', b'1', b'1');
+INSERT INTO `bd_sysrel`.`tb_permissao_telas` (`ID_TELA_FK`, `ADM`, `LIDER`) VALUES ('5', b'1', b'1');
+INSERT INTO `bd_sysrel`.`tb_permissao_telas` (`ID_TELA_FK`, `ADM`, `LIDER`) VALUES ('6', b'1', b'1');
+INSERT INTO `bd_sysrel`.`tb_permissao_telas` (`ID_TELA_FK`, `ADM`, `LIDER`) VALUES ('7', b'1', b'1');
+INSERT INTO `bd_sysrel`.`tb_permissao_telas` (`ID_TELA_FK`, `ADM`, `LIDER`) VALUES ('8', b'1', b'1');
+INSERT INTO `bd_sysrel`.`tb_permissao_telas` (`ID_TELA_FK`, `ADM`, `LIDER`) VALUES ('9', b'1', b'1');
+INSERT INTO `bd_sysrel`.`tb_permissao_telas` (`ID_TELA_FK`, `ADM`, `LIDER`) VALUES ('10', b'1', b'1');
+INSERT INTO `bd_sysrel`.`tb_permissao_telas` (`ID_TELA_FK`, `ADM`, `LIDER`) VALUES ('11', b'1', b'1');
+INSERT INTO `bd_sysrel`.`tb_permissao_telas` (`ID_TELA_FK`, `ADM`, `LIDER`) VALUES ('12', b'1', b'1');
