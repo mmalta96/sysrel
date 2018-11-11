@@ -1,4 +1,6 @@
 <?php 
+
+   session_start();
 $nome = $_POST['nome'];
 $curso = $_POST['curso'];
 $clattes = $_POST['clattes'];
@@ -8,10 +10,15 @@ $idProjeto = $_POST['idProjeto'];
 $idDiscente = $_POST['idDiscente'];
 $idOrientacao = $_POST['idOrientacao'];
 
-
+$lattes = strtoupper($clattes);
 
 include 'abreConexao.php';
+
+
+
 try{
+
+
 
      $sql = "UPDATE tb_discente SET NOME = '$nome' WHERE ID = '$idDiscente';";
     $sql = $conexao->query($sql);
@@ -20,33 +27,31 @@ try{
     $sql = $conexao->query($sql);
 
 
-    if(strpos($clattes, 'LATTES')){
+    if(strpos($lattes, 'LATTES')){
 
 	 $sql = "UPDATE tb_discente SET LATTES = '$clattes' WHERE ID = '$idDiscente';";
     $sql = $conexao->query($sql);}
     else{
                         $_SESSION["ALERT1"] = "O curriculo lattes digitado não é valido";
-        header("location: discente.php?id=".$idProjeto."");
+        header('location:discentes.php?id='.$idProjeto.''); 
                       }   
 
 
     $sql = "UPDATE tb_orientacao SET DATA_INICIO = '$dataVinculo' WHERE ID = '$idOrientacao';";
     $sql = $conexao->query($sql);
 
-       $sql = "UPDATE tb_orientacao SET DATA_TERMINO = '$dataTermino' WHERE ID = '$idOrientacao';";
-    $sql = $conexao->query($sql);
- 
+
 
   
 
-
+ 
 
 $_SESSION["ALERT"] = "Discente cadastrado com sucesso" ;
-                                        header('location:discentes.php?id='.$idProjeto.'');                   
+                                        header('location:discentes.php?id='.$idProjeto.'');                
 }catch (Exception $e){
 
 $_SESSION["ALERT"] = "Discente não foi cadastrado, confira os dados" ;
-                                        header('location:discentes.php?id='.$idProjeto.'');                   
+                                        header('location:discentes.php?id='.$idProjeto.''); 
 
 
 }

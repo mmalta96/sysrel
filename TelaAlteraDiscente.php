@@ -256,7 +256,7 @@ $result1 = $conexao->query($sql);
       }else{
         $dataTerminoCerta = date('d/m/Y', strtotime($dataTermino));
         echo '<label>Data de fim do Vinculo:  '.$dataTermino1.' </label><br>';
-        echo  '   <input type="date" class="date"  value="'.$dataTermino1.'  " name="dataTermino">';
+        echo  '   <input type="date" class="date"  name="dataTermino">';
 
 
       }

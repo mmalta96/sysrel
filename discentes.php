@@ -7,20 +7,19 @@ else{
     header("location:index.php");
 }
 ?>
-
 <!DOCTYPE html>
 <html>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"
-  <link rel="icon" href="imagens/favicon.ico" type="image/x-icon" />
-<link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon" />
-  <title>SYSREL</title>
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
- <link rel="stylesheet" href="css/bootstrapSkety.min.css">
-  <script src="javascript/jquery.min.js"></script>
-  <script src="javascript/bootstrap.min.js"></script>
-  <link href="css/bootstrap-toggle.min.css" rel="stylesheet">
-  <script src="javascript/bootstrap-toggle.min.js"></script>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="imagens/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon" />
+      <title>SYSREL</title>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="css/bootstrapSkety.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 <style>
 body {
     font-family: Arial, Helvetica, sans-serif;
@@ -205,6 +204,20 @@ $sql = "SELECT * FROM tb_projeto_pesquisa WHERE ID = '$$idProjeto';";
 
      ?>
 
+      <?php 
+       
+        if (isset($_SESSION["ALERT1"])){
+            echo'<div class="alert alert-danger alert-dismissible"> 
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                '.$_SESSION["ALERT1"].'
+            </div>';
+
+            unset($_SESSION['ALERT1']);
+        }
+
+      
+    ?>
+
      Discentes do projeto <br><br><br> <?php echo $nome; 
 
 
@@ -223,7 +236,7 @@ $sql = "SELECT * FROM tb_projeto_pesquisa WHERE ID = '$$idProjeto';";
             <th>Nome</th>
             <th>Curso</th>
             <th>Data Vinculo </th>
-            <th>Data Desvinculamento </th>
+            <th>Status Vinculo </th>
             <th>Opções </th>
    </tr>
 
