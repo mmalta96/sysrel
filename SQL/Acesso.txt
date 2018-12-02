@@ -1,0 +1,10 @@
+Administrador:
+login: admin
+senha: 123456aA@
+
+Lider:
+login: lider
+senha: 123456aA@
+
+
+<input type="button" class="btn btn-primary"  value ="Docentes" onclick="idRelatorio(3)" data-toggle="modal"  data-target="#modalAno">
