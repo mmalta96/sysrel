@@ -190,12 +190,12 @@ try {
      $mail->Host = 'mx1.hostinger.com.br';
      $mail->SMTPAuth   = true;  
      $mail->Port       = 587; 
-     $mail->Username = 'contato@sysrel.tk'; 
+     $mail->Username = 'contato@sysrel.ml'; 
      $mail->Password = '183461'; 
  
      //Define o remetente
-     $mail->SetFrom('contato@sysrel.tk', 'Matheus - Sysrel'); 
-     $mail->AddReplyTo('contato@sysrel.tk', 'Matheus - Sysrel'); 
+     $mail->SetFrom('contato@sysrel.ml', 'Matheus - Sysrel'); 
+     $mail->AddReplyTo('contato@sysrel.ml', 'Matheus - Sysrel'); 
      $mail->Subject = 'Recuperacao de Senha';//Assunto do e-mail
  
  
