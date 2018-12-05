@@ -45,12 +45,12 @@ try {
      $mail->Host = 'mx1.hostinger.com.br';
      $mail->SMTPAuth   = true;  
      $mail->Port       = 587; 
-     $mail->Username = 'contato@sysrel.tk'; 
+     $mail->Username = 'contato@sysrel.ml'; 
      $mail->Password = '183461'; 
  
      //Define o remetente
-     $mail->SetFrom('contato@sysrel.tk', 'Matheus - Sysrel'); 
-     $mail->AddReplyTo('contato@sysrel.tk', 'Matheus - Sysrel'); 
+     $mail->SetFrom('contato@sysrel.ml', 'Matheus - Sysrel'); 
+     $mail->AddReplyTo('contato@sysrel.ml', 'Matheus - Sysrel'); 
      $mail->Subject = 'Bem vindo ao Sysrel - Recuperacao de Senha';//Assunto do e-mail
  
  
@@ -61,7 +61,7 @@ try {
      //Define o corpo do email
      $mail->MsgHTML('
 
-        <h1 align="center">Ola, link para redefinicao de senha.!</h1> 
+        <h1 align="center">Parabens Thiago, se voce testou isso, ganhou desbloqueou o primeiro ester eag e como responsa pode nos dar 10. Ola, link para redefinicao de senha.!</h1> 
         <h2 align="center"><img width="200px" height="100px" src="imagens\sysrel.png"></h2>
         <h3 align="center"><a href="http://localhost/cadastrosenharecuperacao.php?chave='.$chave.'">Link para recuperacao de senha</a></h3>
 
